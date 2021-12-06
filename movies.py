@@ -10,7 +10,7 @@ cursor.execute(
 )
 
 # Insert one entry
-# cursor.execute("INSERT INTO Movies VALUES ('Taxi Driver', 'Julito Chulito', 2006)")
+cursor.execute("INSERT INTO Movies VALUES ('Taxi Driver', 'Julito Chulito', 2006)")
 
 famous_films = [
     ("Pulp Fiction", "Quentin Tarantino", 1994),
@@ -19,15 +19,15 @@ famous_films = [
 ]
 
 # Insert several entries at once
-# cursor.executemany("INSERT INTO Movies VALUES (?, ?, ?)", famous_films)
+cursor.executemany("INSERT INTO Movies VALUES (?, ?, ?)", famous_films)
 
-# records = cursor.execute("SELECT * FROM Movies")
-#
-# for record in records:
-#     print(record)
+records = cursor.execute("SELECT * FROM Movies")
+
+for record in records:
+    print(record)
 
 # After printing once, it'll return an empty list.
-# print(cursor.fetchall())
+print(cursor.fetchall())
 
 release_year = (1985,)
 
