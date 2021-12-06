@@ -5,7 +5,9 @@ __pycache__/
 
 # C extensions
 *.so
-
+movies.db
+.idea
+.idea/
 # Distribution / packaging
 .Python
 build/
